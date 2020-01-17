@@ -27,6 +27,7 @@ enum PlayerResponseLinkExtractor {
         static let adaptiveFormats = "adaptiveFormats"
         static let quality = "quality"
         static let url = "url"
+        static let mimeType = "mimeType"
     }
 
     // Return type to match VideoInfo rawInfo
@@ -36,7 +37,9 @@ enum PlayerResponseLinkExtractor {
         guard let streamingData = object[Key.streamingData] as? [String: Any] else { throw Error.missingStreamingData }
         guard let adaptiveFormats = streamingData[Key.adaptiveFormats] as? [[String: Any]] else { throw Error.missingAdaptiveFormats }
         return adaptiveFormats.compactMap { format -> [String: String]? in
-            guard let quality = format[Key.quality] as? String, let url = format[Key.url] as? String else { return nil }
+            guard let quality = format[Key.quality] as? String,
+                let url = format[Key.url] as? String,
+                let mimeType = format[Key.mimeType] as? String, mimeType.contains("video/mp4") else { return nil }
             return [
                 Key.quality: quality,
                 Key.url: url
