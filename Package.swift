@@ -23,6 +23,7 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "YoutubeDirectLinkExtractorTests",
-            dependencies: ["YoutubeDirectLinkExtractor"]),
+            dependencies: ["YoutubeDirectLinkExtractor"],
+            path: "Tests/YoutubeDirectLinkExtractorTests/"),
     ]
 )

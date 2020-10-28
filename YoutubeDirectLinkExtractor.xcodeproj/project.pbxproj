@@ -179,12 +179,7 @@
 		8933C7811EB5B7E0000D00A4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B0450FA5204C5E3E00C45B11 /* Extensions */,
-				8933C7841EB5B820000D00A4 /* YoutubeDirectLinkExtractor.swift */,
-				B03ABD79204C5DBB007C74A3 /* ExtractionSource.swift */,
-				B02AB9DB204DB9110082690F /* VideoInfo.swift */,
-				B03ABD74204C5D59007C74A3 /* Errors.swift */,
-				172BB75D23D0CE1E00A16D3A /* PlayerResponseLinkExtractor.swift */,
+				AEA35D682549530800236AE3 /* YoutubeDirectLinkExtractor */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -198,6 +193,19 @@
 			);
 			name = Tests;
 			path = Tests/YoutubeDirectLinkExtractorTests;
+			sourceTree = "<group>";
+		};
+		AEA35D682549530800236AE3 /* YoutubeDirectLinkExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				B0450FA5204C5E3E00C45B11 /* Extensions */,
+				8933C7841EB5B820000D00A4 /* YoutubeDirectLinkExtractor.swift */,
+				B03ABD79204C5DBB007C74A3 /* ExtractionSource.swift */,
+				B02AB9DB204DB9110082690F /* VideoInfo.swift */,
+				B03ABD74204C5D59007C74A3 /* Errors.swift */,
+				172BB75D23D0CE1E00A16D3A /* PlayerResponseLinkExtractor.swift */,
+			);
+			path = YoutubeDirectLinkExtractor;
 			sourceTree = "<group>";
 		};
 		B0450FA5204C5E3E00C45B11 /* Extensions */ = {
